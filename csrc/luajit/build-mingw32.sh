@@ -1,12 +1,12 @@
 set -e
 git clone http://luajit.org/git/luajit-2.0.git
-cd luajit-2.0
-make
-cd src
+cd luajit-2.0/src
+mingw32-make
 
-bindir=../../../../bin/linux32
+bindir=../../../../bin/mingw32
 platform_dir="$bindir"
-cp -f luajit "$bindir/luajit-bin"
+cp -f lua51.dll "$bindir/"
+cp -f luajit.exe "$bindir/luajit-bin.exe"
 cp -Rf jit "$platform_dir"
 
 cd ../..
