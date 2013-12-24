@@ -1,7 +1,8 @@
 set -e
 git clone http://luajit.org/git/luajit-2.0.git
 cd luajit-2.0/src
-mingw32-make
+mingw32-make clean
+mingw32-make LDFLAGS=-static-libgcc
 
 bindir=../../../../bin/mingw32
 platform_dir="$bindir"
