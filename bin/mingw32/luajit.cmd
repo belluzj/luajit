@@ -6,5 +6,5 @@ set bindir=%~dp0
 set luadir=%bindir%..\..
 set platform_dir=%bindir%
 set LUA_CPATH=%bindir%?.dll
-set LUA_PATH=%platform_dir%?.lua;%luadir%\?.lua;%luadir%?\init.lua
+set LUA_PATH=?.lua;%platform_dir%?.lua;%luadir%\?.lua;%luadir%?\init.lua
 call %bindir%luajit-bin.exe %*
