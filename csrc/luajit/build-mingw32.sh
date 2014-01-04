@@ -8,11 +8,12 @@ mingw32-make clean
 mingw32-make LDFLAGS=-static-libgcc
 
 bindir=../../../../bin/mingw32
-platform_dir="$bindir"
+platform_dir="$bindir/lua"
 upx lua51.dll
 upx luajit.exe
 cp -f lua51.dll "$bindir/"
-cp -f luajit.exe "$bindir/luajit-bin.exe"
+cp -f luajit.exe "$bindir/luajit.exe"
+mkdir -p "$platform_dir"
 cp -Rf jit "$platform_dir"
 
 make clean

@@ -5,8 +5,9 @@ make
 cd src
 
 bindir=../../../../bin/linux32
-platform_dir="$bindir"
-cp -f luajit "$bindir/luajit-bin"
+platform_dir="$bindir/lua"
+cp -f luajit "$bindir/luajit"
+mkdir -p "$platform_dir"
 cp -Rf jit "$platform_dir"
 
 make clean
