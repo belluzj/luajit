@@ -1,4 +1,4 @@
-gcc | grep 4.8 && { echo "LuaJIT 2.0.2 is not working with MinGW's gcc 4.8 (use 4.7 or lower)."; exit 1; }
+# NOTE: LuaJIT 2.0.2 is not working with newer MinGW (GCC 4.8) due to a globing bug (see luajit list).
 set -e
 #git clone http://luajit.org/git/luajit-2.0.git src
 cd src
@@ -12,7 +12,7 @@ platform_dir="$bindir/lua"
 cp -f lua51.dll "$bindir/"
 cp -f luajit.exe "$bindir/luajit.exe"
 mkdir -p "$platform_dir"
-cp -Rf jit "$platform_dir"
+cp -Rf jit/*.lua "$platform_dir/"
 
 make clean
 
