@@ -7,8 +7,8 @@ cd src
 bindir=../../../../bin/linux32
 platform_dir="$bindir/lua"
 cp -f luajit "$bindir/luajit"
-mkdir -p "$platform_dir"
-cp -Rf jit "$platform_dir"
+mkdir -p "$platform_dir/jit"
+cp -Rf jit/*.lua "$platform_dir/jit/"
 
 make clean
 

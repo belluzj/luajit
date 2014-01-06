@@ -11,8 +11,8 @@ bindir=../../../../bin/mingw32
 platform_dir="$bindir/lua"
 cp -f lua51.dll "$bindir/"
 cp -f luajit.exe "$bindir/luajit.exe"
-mkdir -p "$platform_dir"
-cp -Rf jit/*.lua "$platform_dir/"
+mkdir -p "$platform_dir/jit"
+cp -Rf jit/*.lua "$platform_dir/jit/"
 
 make clean
 
