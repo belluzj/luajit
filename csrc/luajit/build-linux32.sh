@@ -1,3 +1,4 @@
+# TODO: use `make amalg PREFIX=` and `make install DESTDIR=`
 set -e
 #git clone http://luajit.org/git/luajit-2.0.git src
 cd src
