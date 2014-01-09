@@ -1,1 +1,9 @@
 luajit 2.0.2 from http://luajit.org/git/luajit-2.0.git (MIT license)
+
+The Windows build comes with a modified package.path as follows:
+
+`..\..\?.lua;..\..\?\init.lua` was added to LUA_PATH in luaconf.h.
+This allows require(<any-luapower-module>) regardless of what the current directory is.
+This only solves the problem of finding luapower modules, but your app modules
+are probably in a different directory. You could use lua-find-bin and lua-lib from
+github.com/davidm for that. Add them to luapower to avoid the obvious chicken/egg problem.
