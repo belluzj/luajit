@@ -2,6 +2,7 @@
 set -e
 #git clone http://luajit.org/git/luajit-2.0.git src
 cd src
+#git checkout -b build v2.0.2
 make
 cd src
 
