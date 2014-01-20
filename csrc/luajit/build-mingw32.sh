@@ -4,7 +4,7 @@ set -e
 cd src
 #git checkout -b build v2.0.2
 cd src
-mingw32-make clean
+make clean
 mingw32-make LDFLAGS=-static-libgcc
 
 bindir=../../../../bin/mingw32
