@@ -1,4 +1,4 @@
-luajit 2.0.2 from http://luajit.org/git/luajit-2.0.git (MIT license)
+luajit 2.0.2 from http://luajit.org/download.html (MIT license)
 
 Makefile was modified to build with -msse -msse2 (not enabled by default).
 
