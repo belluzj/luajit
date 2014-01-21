@@ -7,6 +7,6 @@ luadir="$bindir/../.."                        # platform-indep. Lua modules
 platform_dir="$bindir/lua"                    # platform-specific Lua modules
 
 LD_LIBRARY_PATH="$bindir" \
-LUA_CPATH="$bindir/?.so" \
-LUA_PATH="?.lua;$platform_dir/?.lua;$luadir/?.lua" \
-"$bindir/luajit-bin" "$@"
+LUA_CPATH="$bindir/clib/?.so" \
+LUA_PATH="./?.lua;$platform_dir/?.lua;$luadir/?.lua" \
+exec "$bindir/luajit" "$@"
