@@ -1,4 +1,4 @@
 #!/bin/sh
 # execute luajit from this directory on any platform.
-[ "$OSTYPE" = "msys" ] && platform=mingw32 || platform=linux32
-cd "$(dirname "$0")" && exec bin/$platform/luajit-strict "$@"
+[ "$OSTYPE" = "msys" ] && luajit=bin/mingw32/luajit || luajit=bin/linux32/luajit-strict
+cd "$(dirname "$0")" && exec $luajit "$@"
