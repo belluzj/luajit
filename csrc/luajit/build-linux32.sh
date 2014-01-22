@@ -9,7 +9,7 @@ make
 
 bindir=../../../../bin/linux32
 platform_dir="$bindir/lua"
-cp -f luajit "$bindir/luajit"
+cp -f luajit "$bindir/luajit-bin"
 mkdir -p "$platform_dir/jit"
 cp -Rf jit/*.lua "$platform_dir/jit/"
 
