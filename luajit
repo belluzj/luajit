@@ -1,4 +1,5 @@
 #!/bin/sh
-# execute luajit from this directory on any platform.
+# luajit wrapper that starts luajit in this directory so that scripts can access their files using relative paths.
+# can be called from shell scrips in both Linux and MinGW environments.
 [ "$OSTYPE" = "msys" ] && platform=mingw32 || platform=linux32
 cd "${0%luajit}" && exec bin/$platform/luajit "$@"
