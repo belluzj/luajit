@@ -3,6 +3,8 @@ project: luajit
 tagline: LuaJIT binary
 ---
 
+## Build Notes
+
 Makefile was modified to build with `-msse -msse2` (not enabled by default).
 
 For Windows, LUA_PATH and LUA_CPATH were changed from the default:
