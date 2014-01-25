@@ -3,18 +3,42 @@ project: luajit
 tagline: LuaJIT binary
 ---
 
+## Overview
+
+LuaJIT binary.
+
 ## Build Notes
 
 Makefile was modified to build with `-msse -msse2` (not enabled by default).
 
-For Windows, LUA_PATH and LUA_CPATH were changed from the default:
+## MODULE PATHS
 
-`..\..\?.lua;..\..\?\init.lua` was added to LUA_PATH in luaconf.h.
-This allows require(<any-luapower-module>) regardless of what the current directory is.
-This only solves the problem of finding luapower modules independent of current directory.
-To find your app modules too independent of current directory you could use lua-find-bin
-and lua-lib from github.com/davidm (put them into the luapower directory to avoid
-the obvious chicken/egg problem).
+### On Windows
 
-LUA_CPATH was also modified from `!\?.dll` to `!\clib\?.dll` (this is to allow luapower.lua
-to find C Lua modules separate from other dll files that are not C Lua modules).
+`!\..\..\?.lua;!\..\..\?\init.lua` was added to the default package.path in luaconf.h.
+This allows `require` to find luapower modules regardless of what the current directory is,
+without any additional setup.
+
+The default `package.cpath` was also modified from `!\?.dll` to `!\clib\?.dll`.
+This allows luapower.lua to distinguish Lua/C modules from other dll dependencies.
+
+> Windows looks for dlls in the directory of the executable first, and that's where all the non-module dlls are,
+so independence from system libraries is assured by default.
+
+### On Linux
+
+In Linux, luajit is a shell wrapper script that sets LD_LIBRARY_PATH, LUA_PATH and LUA_CPATH to acheive
+the same effect and assure independence from system libraries.
+
+### Going further
+
+The above only solves the problem of finding luapower modules. To find other files,
+like media files, etc. relative to the directory of the running script, use [glue.bin].
+
+To add more paths to package.path and package.cpath use [glue.luapath] and [glue.cpath].
+
+
+[glue.bin]:     glue.html#bin
+[glue.luapath]: glue.html#luapath
+[glue.cpath]:   glue.html#cpath
+
