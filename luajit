@@ -1,5 +1,5 @@
 #!/bin/sh
 # luajit wrapper that starts luajit in this directory so that scripts can access their files using relative paths.
-# can be called from shell scrips in both Linux and MinGW environments.
-[ "$OSTYPE" = "msys" ] && platform=mingw32 || platform=linux32
+# also, it can be called from shell scrips in both Linux and MinGW environments.
+[ "$OSTYPE" = "msys" ] && platform=mingw32 || [ "$(uname -m)" == "x86_64" ] && platform=linux64 || platform=linux32
 cd "${0%luajit}" && exec bin/$platform/luajit "$@"
