@@ -15,10 +15,18 @@
 !/bin/mingw32/lua/strict.lua
 
 !/bin/linux32/luajit*
+!/bin/linux32/libluajit*
 !/bin/linux32/lua/
 !/bin/linux32/lua/jit/
 !/bin/linux32/lua/jit/**
 !/bin/linux32/lua/strict.lua
+
+!/bin/linux64/luajit*
+!/bin/linux64/libluajit*
+!/bin/linux64/lua/
+!/bin/linux64/lua/jit/
+!/bin/linux64/lua/jit/**
+!/bin/linux64/lua/strict.lua
 
 !/csrc/luajit/
 !/csrc/luajit/**
