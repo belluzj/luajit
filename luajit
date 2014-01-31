@@ -7,4 +7,3 @@
   }
 }
 cd "${0%luajit}" && exec bin/$platform/luajit "$@"
-echo $platform
