@@ -1,12 +1,9 @@
 *
 !/bin/
-!/csrc/
-!/bin/mingw32/
-!/bin/linux32/
-!/media/
 
 !/luajit*
 
+!/bin/mingw32/
 !/bin/mingw32/luajit*
 !/bin/mingw32/lua51*
 !/bin/mingw32/lua/
@@ -14,6 +11,7 @@
 !/bin/mingw32/lua/jit/**
 !/bin/mingw32/lua/strict.lua
 
+!/bin/linux32/
 !/bin/linux32/luajit*
 !/bin/linux32/libluajit*
 !/bin/linux32/lua/
@@ -21,6 +19,7 @@
 !/bin/linux32/lua/jit/**
 !/bin/linux32/lua/strict.lua
 
+!/bin/linux64/
 !/bin/linux64/luajit*
 !/bin/linux64/libluajit*
 !/bin/linux64/lua/
@@ -28,5 +27,14 @@
 !/bin/linux64/lua/jit/**
 !/bin/linux64/lua/strict.lua
 
+!/bin/osx64/
+!/bin/osx64/luajit*
+!/bin/osx64/libluajit*
+!/bin/osx64/lua/
+!/bin/osx64/lua/jit/
+!/bin/osx64/lua/jit/**
+!/bin/osx64/lua/strict.lua
+
+!/csrc/
 !/csrc/luajit/
 !/csrc/luajit/**
