@@ -5,7 +5,7 @@ cd src
 #git checkout -b build v2.0.2
 cd src
 make clean
-mingw32-make LDFLAGS=-static-libgcc
+mingw32-make LDFLAGS="-static-libgcc"
 
 bindir=../../../../bin/mingw32
 platform_dir="$bindir/lua"
