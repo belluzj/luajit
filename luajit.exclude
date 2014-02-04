@@ -16,6 +16,7 @@
 !/media/
 
 !/luajit*
+!/strict.lua
 
 !/bin/mingw32/luajit*
 !/bin/mingw32/lua51*
