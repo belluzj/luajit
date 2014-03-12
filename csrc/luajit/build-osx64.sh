@@ -5,7 +5,7 @@ cd src
 #git checkout -b build v2.0.2
 cd src
 make clean
-make
+make CCOPT_x86="-march=i686 -msse -msse2"
 
 bindir=../../../../bin/osx64
 platform_dir="$bindir/lua"
