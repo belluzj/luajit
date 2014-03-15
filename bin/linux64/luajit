@@ -1,6 +1,6 @@
 #!/bin/sh
 # luajit wrapper that looks for libraries only relative to the current directory
-# and relative to the executable's directory, just like in windows, making the distribution portable.
+# and relative to the executable's directory, making the distribution portable.
 
 # get full path of $0 without spawning a new process (this wrapper process is bad enough)
 bindir="${0%luajit}"

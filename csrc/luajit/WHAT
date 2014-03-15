@@ -10,6 +10,6 @@ in luaconf.h as follows:
 	This only solves the problem of finding luapower modules independent of current directory.
 	To find your app modules too independent of current directory use `glue.lib`.
 
-	LUA_CPATH was also changed from '!\?.dll' to `!\clib\?.dll`.
+	LUA_CPATH was changed from '!\?.dll' to `!\clib\?.dll`.
 	This allows luapower.lua to find C Lua modules separate from other dll files
 	that are not C Lua modules.

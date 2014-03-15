@@ -2,7 +2,7 @@
 set -e
 #git clone http://luajit.org/git/luajit-2.0.git src
 cd src
-#git checkout -b build v2.0.2
+#git checkout -b build v2.0.3
 cd src
 make clean
 make CCOPT_x86="-march=i686 -msse -msse2"
@@ -10,7 +10,7 @@ make CCOPT_x86="-march=i686 -msse -msse2"
 bindir=../../../../bin/osx64
 platform_dir="$bindir/lua"
 cp -f luajit "$bindir/luajit-bin"
-cp -f libluajit.so "$bindir/"
+cp -f libluajit.so "$bindir/libluajit.dylib"
 rm -Rf "$platform_dir/jit/"
 cp -Rf jit "$platform_dir/"
 
