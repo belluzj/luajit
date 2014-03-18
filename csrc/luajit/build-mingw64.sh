@@ -3,12 +3,12 @@ set -e
 cd src
 #git checkout -b build v2.0.3
 cd src
-bindir=../../../../bin/linux64
+bindir=../../../../bin/mingw64
 make clean
 cp -f jit/*.lua "$bindir/../../jit/"
-make LDFLAGS="-s -static-libgcc"
-cp -f luajit "$bindir/luajit-bin"
-cp -f libluajit.so "$bindir/"
+mingw32-make LDFLAGS="-static-libgcc"
+cp -f luajit.exe "$bindir/luajit.exe"
+cp -f lua51.dll "$bindir/"
 cp -f jit/vmdef.lua "$bindir/lua/jit/vmdef.lua"
 
 make clean

@@ -17,6 +17,8 @@
 
 !/luajit*
 !/strict.lua
+!/jit/
+!/jit/**
 
 !/bin/mingw32/luajit*
 !/bin/mingw32/lua51*
