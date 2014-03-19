@@ -1,4 +1,4 @@
 #!/bin/sh
 [ "$OSTYPE" = "msys" ] && platform=mingw32 || \
 	[ "${OSTYPE#darwin}" != "$OSTYPE" ] && platform=osx32 || platform=linux32 
-cd "${0%luajit32}" && exec bin/$platform/luajit "$@"
+exec bin/$platform/luajit "$@"
