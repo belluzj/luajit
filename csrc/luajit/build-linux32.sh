@@ -9,6 +9,7 @@ cp -f jit/*.lua "$bindir/../../jit/"
 make CCOPT_x86="-march=i686 -msse -msse2" LDFLAGS="-s -static-libgcc"
 cp -f luajit "$bindir/luajit-bin"
 cp -f libluajit.so "$bindir/"
+mkdir -p "$bindir/lua/jit"
 cp -f jit/vmdef.lua "$bindir/lua/jit/vmdef.lua"
 
 make clean
