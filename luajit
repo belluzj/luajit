@@ -6,4 +6,4 @@
 		[ "${OSTYPE#darwin}" != "$OSTYPE" ] && platform=osx$a || platform=linux$a
 	}
 }
-exec bin/$platform/luajit "$@"
+exec "${0%luajit}/bin/$platform/luajit" "$@"

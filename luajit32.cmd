@@ -1,1 +1,1 @@
-@call bin\mingw32\luajit %*
+@call "%~dp0bin\mingw32\luajit" %*
