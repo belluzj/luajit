@@ -12,8 +12,7 @@ cd "$curdir"
 luadir="$bindir/../.."                        # platform-indep. Lua modules
 platform_dir="$bindir/lua"                    # platform-specific Lua modules
 
-DYLD_LIBRARY_PATH="$bindir" \
-DYLD_FALLBACK_LIBRARY_PATH=":" \
-LUA_CPATH="./?.so;$bindir/clib/?.so" \
-LUA_PATH="./?.lua;$platform_dir/?.lua;$luadir/?.lua;$luadir/?/init.lua" \
+export LD_LIBRARY_PATH="$bindir"
+export LUA_CPATH="./?.so;$bindir/clib/?.so"
+export LUA_PATH="./?.lua;$platform_dir/?.lua;$luadir/?.lua;$luadir/?/init.lua"
 exec "$bindir/luajit-bin" "$@"
