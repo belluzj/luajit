@@ -1,4 +1,6 @@
-luajit 2.0.3 from http://luajit.org/download.html (MIT license)
+luajit 2.0.3-aug5 from http://luajit.org/download.html (MIT license)
+
+This version was compiled from the master branch on 16 august 2014.
 
 Added flags: -msse -msse2 -static-libgcc
 
